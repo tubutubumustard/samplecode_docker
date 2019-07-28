@@ -1,0 +1,22 @@
+version: '3'
+services:
+  php7.2: # docker-compose run php7.2
+    image: php:7.2-cli
+    volumes:
+      - ./php_sample.php:/php_sample.php
+    command: php php_sample.php
+  php5.6: # docker-compose run php5.6
+    image: php:5.6.0-cli
+    volumes:
+      - ./php_sample.php:/php_sample.php
+    command: php php_sample.php
+  ruby2.6: # docker-compose run ruby2.6
+    image: ruby:2.6
+    volumes:
+      - ./ruby_sample.rb:/ruby_sample.rb
+    command: ruby ruby_sample.rb
+  ruby2.4: # docker-compose run ruby2.4
+    image: ruby:2.4
+    volumes:
+      - ./ruby_sample.rb:/ruby_sample.rb
+    command: ruby ruby_sample.rb
