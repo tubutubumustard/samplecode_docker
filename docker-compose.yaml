@@ -20,3 +20,13 @@ services:
     volumes:
       - ./ruby_sample.rb:/ruby_sample.rb
     command: ruby ruby_sample.rb
+  python3.7: # docker-compose run python3.7
+    image: python:3.7
+    volumes:
+      - ./python_sample.py:/python_sample.py
+    command: python python_sample.py
+  python2.7: # docker-compose run python2.7
+    image: python:2.7
+    volumes:
+      - ./python_sample.py:/python_sample.py
+    command: python python_sample.py
